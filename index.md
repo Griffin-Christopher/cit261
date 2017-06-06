@@ -9,7 +9,7 @@
 - JSON Parse, Stringify
 - Using XMLHTTPRequest to Consume a JSON Web Service
 
-[OO Programming]ooprogramming/)
+[OO Programming](ooprogramming/)
 - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
 - Object Creation Functions, Inheritance, Properties, Methods, Instantiation
 - Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects
