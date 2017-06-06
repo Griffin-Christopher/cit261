@@ -1,0 +1,52 @@
+/* AUTHOR : Christopher Griffin */
+/*
+COLORS
+  Slate Blue:   #6C7989 (Body BG)
+  Light Blue:   #B2D2E1 (Header BG))
+  Lighter Blue: #C6EAFA (Header Borders)
+  Sky Blue:     #069069 (Header <h1>)
+  Steel Blue:   #61778B (Header Text)
+  Pastel Blue:  #5198DF (Header Button BG)
+  Dark Gray:    #393939 (Body <h2>)
+  Gray:         #494949 (Body <h3>...<h6>)
+  Light Gray:   #555555 (Body Text)
+  Darker Gray:  #3A3C42 (Section Highlight BG)
+  Ligher Gray:  #CCCCCC (Footer Text)
+FONTS
+  Title Copy: PT Serif, Georgia, Serif
+  Body Copy:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif
+*/
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,700,700i');
+
+/* LAYOUT */
+* {margin: 0; padding: 0;}
+body {background-color: #6C7989; color: #555; 
+      font: 300 14px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0 auto; width: 90%;}
+
+/* GLOBALS */
+
+/* NAVIGATION */
+  /* Header */
+  /* Global */   
+  /* Local */
+  /* Footer */
+
+/* HEADINGS */
+h1, h2, h3 {line-height: 1.1;}
+h3, h4, h5, h6 {color: #494949;}
+  h1 {color: #069069; font-size: 28px;}  
+  h2 {color: #393939;} 
+
+/* HEADER */
+#header {background-color: #B2D2E1; border-bottom: 1px solid #B2D2E1; color: #61778B;}
+
+/* PAGE */   
+  /* CONTENT */
+  .highlight {background-color: #3A3C42;}
+  /* FORMS */  
+  /* IMAGES */
+
+/* FOOTER */
+#footer {color: #CCC;}
