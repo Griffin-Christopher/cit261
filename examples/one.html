@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fluency Topic 1</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 1</h1>
+      <ul id="headerText">
+        <li>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</li>
+      </ul>
+    </header>
+    <main>
+      <h2>Arrays, Hash Tables and Objects</h2>
+      <p id="arrayOutput">Array: </p>
+      <p id="hashOutput">Hash Table: </p>
+      <p id="objectOutput">Object: </p>
+      <p id="mergedOutput">Merged Object: </p>
+      <h2>Count by X</h2>
+      <ul id="countByMultiples">
+        <li><button class="countButton" type="button" 
+                    onclick="countBy(1)">1's</button></li>
+        <li><button class="countButton" type="button" 
+                    onclick="countBy(2)">2's</button></li>
+        <li><button class="countButton" type="button" 
+                    onclick="countBy(3)">3's</button></li>
+        <li><button class="countButton" type="button" 
+                    onclick="countBy(4)">4's</button></li>
+        <li><button class="countButton" type="button" 
+                    onclick="countBy(5)">5's</button></li>
+      </ul>
+      <p id="countOutput"></p>
+      <h2>Enter a Number Between 1-10</h2>
+      <input id="number" type="number">
+      <input class="button" type="button" value="Check Number"
+              onclick="checkNumber()">
+      <p id="checkOutput"></p>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // ARRAY
+      var setOne = [2, "A", "B"];
+      getByID("arrayOutput").innerHTML += setOne[0] + ", " +
+          setOne[1] + ", " + setOne[2];
+      
+      // HASH TABLE
+      var setTwo = new Array();
+      setTwo["a"] = 2;
+      setTwo["b"] = 2;
+      setTwo["c"] = "C";
+      getByID("hashOutput").innerHTML += setTwo["a"] + ", " +
+          setTwo["b"] + ", " + setTwo["c"];
+
+      // OBJECT
+      var countByTwo = {
+        count1: null, skip2:  null, skip3: null, 
+        count3: null, count4: null, skip5: null,
+        count6: 2,    count7: 2,    count8: 2};
+      
+      // Values Before Merging
+      var i; var j = 0;
+      for (i in countByTwo) {
+        getByID("objectOutput").innerHTML += countByTwo[i] + (j === 8 ? "." : ", ");
+        j++;
+      }
+      
+      // Merge Array/Hash Table into Object
+      countByTwo.count1 = setOne[0];
+      countByTwo.skip2  = setOne[1];
+      countByTwo.skip3  = setOne[2];
+      countByTwo.count3 = setTwo["a"];
+      countByTwo.count4 = setTwo["b"];
+      countByTwo.skip5  = setTwo["c"];
+      
+      // Values After Merging
+      for (i in countByTwo) {
+        getByID("mergedOutput").innerHTML += countByTwo[i] + (j === 1 ? "." : ", ");
+        j--;
+      }
+      
+      // FUNCTIONS
+      function countBy(multiple){
+        // Counting Variables
+        var i = 0;
+        var text = "0";
+        // Count By Which Multiple?
+        switch(multiple) {
+          case 1: // FOR Count by 1's
+            for (;i < 10;) {text += ", " + ++i;}
+            break;
+          case 2: // FOR IN Count by 2's
+            var j; 
+            for (j in countByTwo) {
+              // Only Count INT's
+              if (parseInt(countByTwo[j], 10)) {
+                i += countByTwo[j];
+                text += ", " + i;
+              }
+            }
+            break;
+          case 3: // WHILE Count by 3's
+            while (i < 15) {i += 3; text += ", " + i;}
+            break;
+          case 4: // DO WHILE Count by 4's
+            do {i += 4; text += ", " + i;}
+            while (i < 20);
+            break;
+          default:
+            text = "I don't know how to count that way";
+        }
+        // Completed Count
+        getByID("countOutput").innerHTML = text += ".";
+      }
+      
+      function checkNumber() {
+        var num = getByID("number").value;
+        // Inspect User Input
+        if (!parseInt(num, 10)) { 
+          getByID("checkOutput").innerHTML = "ERROR: That is not a number!";
+        } else if (num < 1) {
+          getByID("checkOutput").innerHTML = "ERROR: Number is less than 1!";
+        } else if (num > 10) {
+          getByID("checkOutput").innerHTML = "ERROR: Number is greater than 10!";
+        } else {
+          getByID("checkOutput").innerHTML = 
+              (num % 2 === 0 ? "Number is even." : "Number is odd.");
+        }
+      }
+    </script>
+  </body>
+</html>

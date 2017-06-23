@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <link type="text/css" rel="stylesheet" href="/cit261/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Proficiency Examples</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
+    <script type="text/javascript" src="../assets/js/json.js"></script>
   </head>
-  <body>
-    <div>TODO write content</div>
+  <body onload="onLoad()">
+    <header>
+      <h1 id="headerTitle">JSON Proficiency Examples</h1>
+      <ul id="headerText">
+        <li>JSON Parse, Stringify</li>
+        <li>Using XMLHttpRequest to Consume a JSON Web Servce</li>
+      </ul>
+    </header>
+    <nav id="globalNav">
+      <ul id="navLinks">
+        <li><a href="../miscellaneous/index.html">Miscellaneous</a></li>
+        <li><a href="../json/index.html">JSON</a></li>
+        <li><a href="../ooprogramming/index.html">OO Programming</a></li>
+        <li><a href="../css3morphs/index.html">CSS3 Morphs</a></li>
+        <li><a href="../javascript/index.html">JavaScript</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Page Author</h2>
+      <p id="author">Placeholder</p>
+      <p id="quote">Placeholder</p>
+      <form id="visitorInfo" action="" method="post">
+        <label>First Name:</label>
+        <input type="text" name="firstName" pattern="[a-zA-Z ]"
+               title="Placeholder." value="Placeholder" required>
+        <label>Last Name:</label>
+        <input type="text" name="lastName" pattern="[a-zA-Z ]"
+               title="Placeholder." value="Placeholder" required>
+        <label>Birthday:</label>
+        <input type="text" name="firstName" pattern="[0-9]"
+               title="Placeholder." value="Placeholder" required>
+        <label id="buttonReminder">(All Fields Required)</label>
+        <input class="button" type="submit" value="">
+      </form>
+      <h2>Visitors</h2>
+      <table id="visitorList">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Birthday</th>
+        </tr>
+      </table>
+    </main>
+    <footer>
+      <p id="footerText"><a href="https://griffin-christopher.github.io/cit261/">(Return to Index)</a></p>
+    </footer>
   </body>
 </html>

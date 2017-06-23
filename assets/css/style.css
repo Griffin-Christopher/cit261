@@ -1,0 +1,91 @@
+/* AUTHOR : Christopher Griffin */
+/*
+COLORS
+  Slate Blue:   #6C7989 (Body BG)
+  Lighter Blue: #C6EAFA (Header BG)
+  Light Blue:   #B2D2E1 (Header Border)
+  Sky Blue:     #006699 (Header <h1>, Global Nav Active <a>)
+  Steel Blue:   #61778B (Header Text)
+  Pastel Blue:  #5198DF (Header Button BG)
+  Darker Gray:  #3A3C42 (Global Nav BG)
+  Dark Gray:    #393939 (Body <h2>)
+  Gray:         #494949 (Body <h3>...<h6>)
+  Light Gray:   #555555 (Body Text)
+  Gray          #DEDEDE (Main BG)
+  Lighter Gray: #CCCCCC (Footer Text, Global Nav <a>)
+FONTS
+  Title Copy: PT Serif, Georgia, Serif
+  Body Copy:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif
+*/
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,700,700i');
+
+/* LAYOUT */
+* {margin: 0; padding: 0;}
+body {background-color: #6C7989; border: 1px solid #222; color: #555; 
+      font: 300 14px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 20px auto 0; min-width: 750px;  max-width: 1024px; width: 90%;}
+
+/* GLOBALS */
+button, .button {padding: 5px;}
+
+/* NAVIGATION */
+  /* Header */
+  /* Global */
+  #globalNav {background-color: #3A3C42; border-top: 1px solid #111; border-bottom: 1px solid #111;}
+    #navLinks {text-align: center;}
+      #navLinks li {display: inline-block; margin: 10px auto; padding: 0 20px;}
+        #navLinks a {font-size: 16px; font-weight: bold; text-decoration: none;}
+        #navLinks a:link, #navLinks a:visited 
+          {color: #5198DF; text-transform: uppercase;}
+        #navLinks a:hover {color: #CCCCCC;  text-decoration: underline;}
+        #navLinks a:active, #navLinks a:focus
+          {color: #CCCCCC;}
+  /* Local */
+  /* Footer */
+  #footerText a {font-weight: bold; text-decoration: none; letter-spacing: 1px; word-spacing: 1px;}
+    #footerText a:link, #footerText a:visited, 
+    #footerText a:active, #footerText a:focus
+      {color: #CCCCCC;}
+    #footerText a:hover {color: #CCCCCC;  text-decoration: underline;}
+
+/* HEADINGS */
+h1, h2, h3 {line-height: 1.1;}
+h3, h4, h5, h6 {color: #494949;}
+  h1 {color: #069; font-size: 24px;}  
+  h2 {color: #393939;}
+  h2:not(:first-child) {margin-top: 20px;}
+
+/* HEADER */
+header {background-color: #C6EAFA; border-bottom: 1px solid #B2D2E1; color: #61778B;padding: 20px 30px 10px;}
+  #headerTitle {}
+  #headerText {font-size: 13px; list-style: none;}
+    #headerText li {margin-top: 2px;}
+
+/* PAGE */   
+  /* CONTENT */
+  main {background-color: #DEDEDE; border-top: 1px solid #fff; border-bottom: 1px solid #eee; padding: 30px;}
+  .highlight {background-color: #3A3C42;}
+    /* Miscellaneous Topics */
+    #videoSizes, #audioControllers, #canvasButtons
+      {margin: 10px 0 20px;}
+      #videoSizes li, #audioControllers li, #canvasButtons li 
+      {display: inline-block; margin-right: 5px;}
+      #canvasButtons:nth-child(5) {display: block;}
+    #videoPlayer, #audioPlayer {margin-bottom: 20px;}
+    #videoPlayer {height: auto; max-width: 100%;}
+    #removeMedia {margin-top: 10px;}
+    
+  /* EXAMPLES */
+    /* Topic One */
+    #arrayOutput {margin-top: 10px;}
+    #hashOutput, #objectOutput, #mergedOutput {margin-top: 5px;}
+    #countByMultiples {}
+      #countByMultiples li {display: inline-block; margin: 10px 5px 0 0;}
+    #countOutput, #checkOutput {margin-top: 10px;}
+    #number {margin: 10px 5px 0 0; padding: 5px;}
+    /* Topic Two */
+    #parentMath, #childMath, #userOutput {margin-top: 5px;}
+
+/* FOOTER */
+footer {background-color: #3A3C42; border-top: 1px solid #111; color: #CCC; padding: 15px 0 15px; text-align: center;}

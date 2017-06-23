@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <link type="text/css" rel="stylesheet" href="/cit261/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscellaneous Proficiency Examples</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
+    <script type="text/javascript" src="../assets/js/miscellaneous.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Miscellaneous Proficiency Examples</h1>
+      <ul id="headerText">
+        <li>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</li>
+        <li>HTML5 Tags - Video, Audio, and Canvas</li>
+      </ul>
+    </header>
+    <nav id="globalNav">
+      <ul id="navLinks">
+        <li><a href="../miscellaneous/index.html">Miscellaneous</a></li>
+        <li><a href="../json/index.html">JSON</a></li>
+        <li><a href="../ooprogramming/index.html">OO Programming</a></li>
+        <li><a href="../css3morphs/index.html">CSS3 Morphs</a></li>
+        <li><a href="../javascript/index.html">JavaScript</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Choose a Video Size</h2>
+      <ul id="videoSizes">
+        <li><button class="videoSizeButton" type="button" 
+                    onclick="createSmallVideo()">Small (240p)</button></li>
+        <li><button class="videoSizeButton" type="button" 
+                    onclick="createMediumVideo()">Medium (360p)</button></li>
+        <li><button class="videoSizeButton" type="button" 
+                    onclick="createLargeVideo()">Large (480p)</button></li>
+      </ul>
+      <h2>Choose an Audio Player Controller</h2>
+      <ul id="audioControllers">
+        <li><button class="audioPlayerButton" type="button" 
+                    onclick="createAutoAudio()">Automatic (Play)</button></li>
+        <li><button class="audioPlayerButton" type="button" 
+                    onclick="createManualAudio()">Manual (Pause)</button></li>
+      </ul>
+      <h2>Choose a Drawing</h2>
+      <ul id="canvasButtons">
+        <li><button id="drawLines"   type="button">Lines</button></li>
+        <li><button id="drawCircles" type="button">Circles</button></li>
+        <li><button id="drawText"    type="button">Text</button></li>
+        <li><button id="draw3DText"  type="button">3D Text</button></li>
+        <li><button id="drawLGrad"   type="button">Linear Gradient</button></li>
+        <li><button id="drawRGrad"   type="button">Radial Gradient</button></li>
+      </ul>
+    </main>
+    <footer>
+      <p id="footerText"><a href="https://griffin-christopher.github.io/cit261/">(Return to Index)</a></p>
+    </footer>
   </body>
 </html>

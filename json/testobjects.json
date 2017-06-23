@@ -1,0 +1,8 @@
+{
+  "author"  : "Christopher Griffin",
+  "quote"   : "How you do anything is how you do everything.",
+  "defaults" : {"first":"First Name", "last":"Last Name", "birthday":"MM-DD-YYYY"},
+  "visitors": [
+    {"first":"Christopher", "last":"Griffin", "birthday":"01-16-1990"}  
+  ]
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fluency Topic 2</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 2</h1>
+      <ul id="headerText">
+        <li>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</li>
+      </ul>
+    </header>
+    <main>
+      <h2>Parent Object</h2>
+      <p id="parentMath"></p>
+      <h2>Child Object</h2>
+      <p id="childMath"></p>
+      <h2>Double a Number</h2>
+      <input id="number" type="number">
+      <input class="button" type="button" value="Double" onclick="multiply()">
+      <p id="userOutput"></p>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // Parent Object
+      Parent = function() {
+        // Properties
+        this.a = 2;
+        this.b = 3;
+        // Method
+        this.add = function() {return this.a + this.b;};
+      };
+      
+      // Instantiate
+      var parent = new Parent();
+      // A + B
+      getByID("parentMath").innerHTML = parent.a + " + " + parent.b + " = " 
+                                      + parent.add();     
+      // Child Object
+      Child = function() {
+        // Properties
+        this.c = 4;
+        // Method
+        this.subtract = function() {return this.add() - this.c;};
+        this.multiply = function(num) {return this.a * num;};
+      };
+      Child.prototype = new Parent();
+
+      // Instantiate
+      var child = new Child();
+      // A + B - C
+      getByID("childMath").innerHTML = parent.a + " + " + parent.b + " - " 
+                                     + child.c + " = " + child.subtract();
+      // A * NUM
+      function multiply() {
+        // Pull User Input
+        var num = 0;
+        // A * 0 if non-numerical input
+        if (parseInt(getByID("number").value)) {
+          num = getByID("number").value;
+        }
+        getByID("userOutput").innerHTML = parent.a + " x " + num
+                                       + " = " + child.multiply(num);
+      }
+    </script>
+  </body>
+</html>
