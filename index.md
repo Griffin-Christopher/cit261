@@ -1,6 +1,7 @@
 ## Proficiency Index for Christopher Griffin
 
 ### Code Examples
+
 1. [Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays](examples/one.html)
 2. [Object Creation Functions, Inheritance, Properties, Methods, Instantiation](examples/two.html)
 3. [JSON Parse, Stringify](examples/three.html)
