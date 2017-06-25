@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 11</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 11</h1>
+      <ul id="headerText">
+        <li>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (Thought Library)</li>
+      </ul>
+    </header>
+    <main>
+      <h2>Flexible Background</h2>
+      <div id="subject"></div>
+      <ul>
+        <li><button type="button" onclick="addWidth()">Wider</button></li>
+        <li><button type="button" onclick="subWidth()">Narrower</button></li>
+        <li><button type="button" onclick="addHeight()">Taller</button></li>
+        <li><button type="button" onclick="subHeight()">Shorter</button></li>
+        <li><button type="button" onclick="makeBlue()">Blue!</button></li>
+      </ul>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      function addWidth() {
+        getByID("subject").style.width = "100px";
+      }
+      function subWidth() {
+        getByID("subject").style.width = "25px";
+      }
+      function addHeight() {
+        getByID("subject").style.height = "100px";
+      }
+      function subHeight() {
+        getByID("subject").style.height = "25px";
+      }
+      function makeBlue() {
+        getByID("subject").style.backgroundColor = "blue";
+      }
+    </script>
   </body>
 </html>

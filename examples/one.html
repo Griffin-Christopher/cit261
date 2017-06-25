@@ -52,8 +52,8 @@
       setTwo["a"] = 2;
       setTwo["b"] = 2;
       setTwo["c"] = "C";
-      getByID("hashOutput").innerHTML += setTwo["a"] + ", " +
-          setTwo["b"] + ", " + setTwo["c"];
+      getByID("hashOutput").innerHTML += setTwo["a"] + ", " 
+          + setTwo["b"] + ", " + setTwo["c"];
 
       // OBJECT
       var countByTwo = {
@@ -64,7 +64,8 @@
       // Values Before Merging
       var i; var j = 0;
       for (i in countByTwo) {
-        getByID("objectOutput").innerHTML += countByTwo[i] + (j === 8 ? "." : ", ");
+        getByID("objectOutput").innerHTML += countByTwo[i] 
+                                          + (j === 8 ? "." : ", ");
         j++;
       }
       
@@ -78,7 +79,8 @@
       
       // Values After Merging
       for (i in countByTwo) {
-        getByID("mergedOutput").innerHTML += countByTwo[i] + (j === 1 ? "." : ", ");
+        getByID("mergedOutput").innerHTML += countByTwo[i] 
+                                          + (j === 1 ? "." : ", ");
         j--;
       }
       

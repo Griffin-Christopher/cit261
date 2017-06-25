@@ -1,16 +1,86 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 7</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 7</h1>
+      <ul id="headerText">
+        <li>Manipulating CSS Class Properties Using JavaScript</li>
+      </ul>
+    </header>
+    <main>
+      <h2 id="single">Single Class</h2>
+      <ul>
+        <li class="blue">I should be blue. . .</li>
+        <li class="blue">I should be too. . .</li>
+        <li class="blue">Why aren't we blue?</li>
+      </ul>
+      <h2 id="double">Multi-Class</h2>
+      <ul>
+        <li class="underscore green">Underscored Green</li>
+        <li class="bold green">Bold Green</li>
+        <li class="italic green">Italic Green</li>
+      </ul>
+      <h2 id="split">Mixed-Class</h2>
+      <ul>
+        <li class="underscore blue">Blue Underscore</li>
+        <li class="bold green">Bold Green</li>
+        <li class="italic underscore">Italic Underscore</li>
+      </ul>
+      <p id="wut">Those elements don't look right. . .</p>
+      <button type="button" onclick="modifyClasses()">Fix It!</button>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // Correct Faulty CSS
+      function modifyClasses() {
+        // Fix Blue Color
+        var blueElements = getByClass("blue");
+        for (i = 0; i < blueElements.length; i++) {
+          blueElements[i].style.color = "blue";
+        }
+        
+        // Fix Green Color
+        var greenElements = getByClass("green");
+        for (i = 0; i < blueElements.length; i++) {
+          greenElements[i].style.color = "green";
+        }
+        
+        // Fix Underscored Text
+        var underscoredElements = getByClass("underscore");
+        for (i = 0; i < underscoredElements.length; i++) {
+          underscoredElements[i].style["text-decoration"] = "underline";
+        }
+        
+        // Fix Bold Text
+        var boldElements = getByClass("bold");
+        for (i = 0; i < boldElements.length; i++) {
+          boldElements[i].style.fontStyle  = "normal";
+          boldElements[i].style.fontWeight = "bold";
+        }
+        
+        // Fix Italic Text
+        var italicizedElements = getByClass("italic");
+        for (i = 0; i < italicizedElements.length; i++) {
+          italicizedElements[i].style.fontWeight = "normal";
+          italicizedElements[i].style.fontStyle  = "italic";
+        }
+        
+        // Collect Blue Class
+        var blueText = getByClass("blue");
+        // Change Text for Blue Single Class List
+        blueText[0].innerHTML = "Yay I'm blue!";
+        blueText[1].innerHTML = "Yay me too!";
+        blueText[2].innerHTML = "We're finally blue!";
+        // Update Message
+        getByID("wut").innerHTML = "That looks much better!";
+      }
+    </script>
   </body>
 </html>

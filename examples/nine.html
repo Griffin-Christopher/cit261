@@ -1,16 +1,107 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html id="screen">
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 9</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 9</h1>
+      <ul id="headerText">
+        <li>Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</li>
+      </ul>
+    </header>
+    <main>
+      <h2>Responsive Buttons</h2>
+      <div class="half">
+        <p id="clickText">Mouse Button</p>
+        <button id="clicker" type="button">Click Me!</button>
+        <p id="clickStatus"></p>
+      </div>
+      <div class="half">
+        <p id="touchText">Touchscreen Button</p>
+        <button id="toucher" type="button">Touch Me!</button>
+      </div>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // Page Load Initialization
+      window.onload = function() {
+        // Responsive Mouse Button
+        newEvent("clicker", "mouseover", mouseOver);
+        newEvent("clicker", "click", mouseClick);
+        newEvent("clicker", "mouseout", mouseOut);
+        
+        // Responsive Touch Button
+        newEvent("screen", "touchstart", touchStart);
+        newEvent("screen", "touchend", touchEnd);
+      };
+      
+      // Mouse Functions
+      function mouseOver() {
+        // Encouragement!
+        var text = getByID("clickText");
+        text.innerHTML = "CLICK IT! CLICK IT! CLICK IT!";
+        text.classList.add("grow");
+        newEvent("clickText", "animationstart", statusIn);
+        newEvent("clickText", "animationend", statusOut);
+        // Responsiveness
+        var button = getByID("clicker");
+        button.classList.add("expand");
+      }
+      function statusIn() {
+        getByID("clickStatus").innerHTML = "The text is growing.";
+      }
+      function statusOut() {
+        getByID("clickStatus").innerHTML = "The text has finished growing.";
+      }
+      function mouseClick() {
+        // Celebration!
+        var text = getByID("clickText");
+        text.innerHTML = "YASSSSS!! YOU CLICKED IT!";
+        text.classList.add("strobe");
+      }
+      function mouseOut() {
+        // Disappointment
+        var text = getByID("clickText");
+        text.innerHTML = "Fine, don't click it. . .";
+        text.classList.remove("grow", "strobe");
+        getByID("clickStatus").innerHTML = "";
+        // Responsiveness
+        var button = getByID("clicker");
+        button.classList.remove("expand");
+      }
+      
+      // Touch Functions
+      function touchStart() {
+        // Encouragement!
+        var text = getByID("touchText");
+        text.innerHTML = "HEY! COME TOUCH THIS BUTTON!";
+        text.style.fontWeight = "bold";
+        text.classList.add("colorize");
+        newEvent("touchText", "transitionend", blink);
+        // Responsiveness
+        var button = getByID("toucher");
+        button.classList.add("glow");
+      }
+      function blink() {
+        getByID("touchText").classList.add("blink");
+      }
+      function touchEnd() {
+        // Disappointment
+        var text = getByID("touchText");
+        text.innerHTML = "Wait, come back. . .";
+        text.style.fontWeight = "normal";
+        text.classList.remove("colorize");
+        text.classList.remove("blink");
+        delEvent("touchText", "transitionend", blink);
+        // Responsiveness
+        var button = getByID("toucher");
+        button.classList.remove("glow");
+      }
+    </script>
   </body>
 </html>

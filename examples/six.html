@@ -1,16 +1,44 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 6</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 6</h1>
+      <ul id="headerText">
+        <li>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</li>
+      </ul>
+    </header>
+    <main id="page">
+      <p id="removeMe">Remove me!</p>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // Set Parent Element
+      var parent = getByID("page");
+      
+      // Set Cursor
+      var target;
+      
+      // insertBefore
+      target = newElement("H2");
+      target.id = "contentHeading";
+      target.innerHTML = "Dynamic Content";
+      parent.insertBefore(target, getByID("removeMe"));
+      
+      // appendChild
+      target = newElement("P");
+      target.id = "newCopy";
+      target.innerHTML = "This section was created entirely with JavaScript!";
+      parent.appendChild(target);
+      
+      // removeChild
+      parent.removeChild(getByID("removeMe"));
+    </script>
   </body>
 </html>

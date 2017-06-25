@@ -77,15 +77,190 @@ header {background-color: #C6EAFA; border-bottom: 1px solid #B2D2E1; color: #617
     #removeMedia {margin-top: 10px;}
     
   /* EXAMPLES */
-    /* Topic One */
+    /* Topic 1 */
     #arrayOutput {margin-top: 10px;}
     #hashOutput, #objectOutput, #mergedOutput {margin-top: 5px;}
     #countByMultiples {}
       #countByMultiples li {display: inline-block; margin: 10px 5px 0 0;}
     #countOutput, #checkOutput {margin-top: 10px;}
     #number {margin: 10px 5px 0 0; padding: 5px;}
-    /* Topic Two */
+    
+    /* Topic 2 */
     #parentMath, #childMath, #userOutput {margin-top: 5px;}
+    
+    /* Topic 3 */
+    #notation, #parseOne, #parseTwo, #stringify {margin-top: 5px;}
+    
+    /* Topic 4 */
+    #locations p:first-of-type {margin-top: 10px;}
+    #locations p {margin-top: 5px;}
+    #credits {margin-top: 10px;}
+    
+    /* Topic 5 */
+    #dynamicWelcome, #metrics {margin-top: 10px;}
+    #pseudoForm {width: 50%;}
+      #pseudoForm label:not(:last-of-type) {display: inline-block; text-align: right; width: 25%;}
+      #pseudoForm input:not(.button) {margin: 10px 0 0 10px; padding: 5px; width: 65%;}
+      #storeInfo.button {margin: 10px auto 0; width: 97.6%; }
+      #metrics {display: inline-block; text-align: center; width: 60%;}
+      #clearStorage.button {width: 37%;}
+      
+    /* Topic 6 */
+    #newCopy {margin-top: 10px;}
+    
+    /* Topic 7 */
+    #single ~ ul li, #double ~ ul li, #mixed ~ ul li {list-style: none;}
+      .blue {color: orange;}
+      .green {color: brown;}
+      .underscore {text-decoration: line-through;}
+      .bold {font-style: italic;}
+      .italic {font-weight: bold;}
+    #wut {margin-top: 20px;}
+    #wut ~ button {margin-top: 10px;}
+    
+    /* Topic 8 */
+    @keyframes pulsing {
+      from {height: 50px; width: 50px;}
+      to   {height: 75px; width: 75px;}
+    }
+    @-webkit-keyframes pulsing {
+      from {height: 50px; width: 50px;}
+      to   {height: 75px; width: 75px;}
+    }
+    .pulsing {-webkit-animation: pulsing 2s linear infinite alternate;
+                      animation: pulsing 2s linear infinite alternate;}
+    @keyframes spinning {
+      from {-webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);}
+      to   {-webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);}
+    }
+    @-webkit-keyframes spinning {
+      from {-webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);}
+      to   {-webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);}
+    }
+    .spinning    {-webkit-animation: spinning 1s linear infinite;
+                          animation: spinning 1s linear infinite;}   
+    #shapes {height: 130px; text-align: center;}
+      #shapes div {transition: background-color 1s;}
+      .axle {display: inline-block;  margin: 20px 40px 0;}
+        .pulsing {background-color: black; display: inline-block; height: 50px; width: 50px;}
+    #startStop {text-align: center;}
+    
+    /* Topic 9 */
+    .half {display: inline-block; margin: auto; height: 200px; vertical-align: top; width: 48%;}
+    @keyframes grow {
+      from {font-weight: normal; font-size: 14px;}
+      to   {font-weight: bold; font-size: 20px;}
+    }
+    @-webkit-keyframes grow {
+      from {font-weight: normal; font-size: 14px;}
+      to   {font-weight: bold; font-size: 20px;}
+    }
+    @keyframes strobe{
+      from {color: black;}
+      to   {color: green;}
+    }
+    @-webkit-keyframes strobe {
+      from {color: black;}
+      to   {color: green;}
+    }
+    @keyframes blink {
+      from {opacity: 1.0;}
+      to   {opacity: 0.0;}
+    }
+    @-webkit-keyframes blink {
+      from {opacity: 1.0;}
+      to   {opacity: 0.0;}
+    }
+    #clickText {margin-top: 20px;}
+      .grow {-webkit-animation: grow 1s 1 forwards;
+                     animation: grow 1s 1 forwards;}
+      .strobe {font-weight: bold; font-size: 20px;
+               -webkit-animation: strobe 0.25s infinite alternate;
+                       animation: strobe 0.25s infinite alternate;}
+    #clicker {margin-top: 20px; height: 29px; width: 70px; 
+              transition: height 2s, width 2s;}
+      #clicker.expand {height: 40px; width: 100px;}
+    #clickStatus {margin-top: 10px;}
+    #touchText {margin-top: 20px; transition: color 1s;}
+      .colorize {color: green;}
+      .blink {-webkit-animation: blink 0.5s linear infinite alternate;
+                      animation: blink 0.5s linear infinite alternate;}
+    #toucher {margin-top: 20px; transition: background-color 1s;}
+      .glow {background-color: yellow;}
+      
+      /* Topic 10 */
+      #redirect {margin-top: 10px;}
+      
+      /* Topic 11 */
+      #subject {background-color: black; margin: 20px; height: 50px; width: 50px;
+                transition: background-color 0.5s, height 1s, width 1s;}
+      #subject ~ ul li {display: inline-block; list-style: none; margin-right: 5px;}
+      
+      /* Topic 12 */
+      #flubber {background-color: black; margin: 20px; height: 50px; width: 50px;
+                transition: transform 1s;}
+      #flubber ~ ul {margin-top: 40px;}
+        #flubber ~ ul li {display: inline-block; list-style: none; margin-right: 5px;}
+      #resetMorphs {margin-top: 20px;}
+      .matrix {transform: matrix(0.15, 0.30, 0.45, 0.60, 0.75, 0.9);}
+      .translate {transform: translate(25px, 25px);}
+      .scale {transform: scale(0.75, 1.25);}
+      .rotate {transform: rotate(90deg);}
+      .skew {transform: skew(30deg, 30deg);}
+      
+      /* Topic 13 */
+      @keyframes bounce {
+        from {transform: translateX(0px)}
+        to   {transform: translateX(75px)}
+      }
+      @-webkit-keyframes bounce {
+        from {transform: translateX(0px)}
+        to   {transform: translateX(75px)}
+      }
+      .bounce {-webkit-animation: bounce 1s ease infinite alternate;
+                       animation: bounce 1s ease infinite alternate;}
+      @keyframes rainbow {
+        0%   {background-color: red;}
+        15%  {background-color: orange;}
+        30%  {background-color: yellow;}
+        45%  {background-color: green;}
+        60%  {background-color: blue;}
+        75%  {background-color: white;}
+        100% {background-color: violet;}
+      }
+      @-webkit-keyframes rainbow {
+        0%   {background-color: red;}
+        15%  {background-color: orange;}
+        30%  {background-color: yellow;}
+        45%  {background-color: green;}
+        60%  {background-color: blue;}
+        75%  {background-color: white;}
+        90%  {background-color: violet;}
+        100% {background-color: red;}
+      }
+      .rainbow {-webkit-animation: rainbow 3.5s linear infinite;
+                        animation: rainbow 3.5s linear infinite;}
+      @keyframes hover {
+        from {opacity: 1.0;}
+        to   {opacity: 0.0;}
+      }
+      @-webkit-keyframes hover {
+        from {opacity: 1.0;}
+        to   {opacity: 0.0;}
+      }
+      .hover {-webkit-animation: hover 0.5s linear 1.5s infinite alternate;
+                      animation: hover 0.5s linear 1.5s infinite alternate;}     
+      #crt {background-color: black; margin: 20px; height: 50px; width: 50px;}
+      #crt ~ ul {margin-top: 40px;}
+        #crt ~ ul li {display: inline-block; list-style: none; margin-right: 5px;}
 
 /* FOOTER */
 footer {background-color: #3A3C42; border-top: 1px solid #111; color: #CCC; padding: 15px 0 15px; text-align: center;}

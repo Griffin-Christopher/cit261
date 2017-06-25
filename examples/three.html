@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 3</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 3</h1>
+      <ul id="headerText">
+        <li>JSON Parse, Stringify</li>
+      </ul>
+    </header>
+    <main>
+      <h2>JSON String Notation</h2>
+      <p id="notation"></p>
+      <h2>JSON Parse</h2>
+      <p id="parseOne"></p>
+      <p id="parseTwo"></p>
+      <h2>JSON Stringify</h2>
+      <p id="stringify"></p>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // JSON String Notation
+      var me = '{"first":"Christopher","last":"Griffin","age":27}';
+      getByID("notation").innerHTML = me;
+      
+      // JSON Parse String to Object
+      var meObject = JSON.parse(me);
+      
+      // Who Am I?
+      getByID("parseOne").innerHTML = meObject.first + " " 
+          + meObject.last + " is " + meObject.age + " years olds.";
+                             
+      // Mid-life Crisis!
+      meObject.first = "C-Dawg";
+      meObject.last  = "McGriffy";
+      meObject.age   = 40;
+      
+      // Who Am I Now?
+      getByID("parseTwo").innerHTML = meObject.first + " " 
+          + meObject.last + " is " + meObject.age + " years olds.";
+      
+      // JSON Stringify Object to String
+      var newMe = JSON.stringify(meObject);
+      getByID("stringify").innerHTML = newMe;
+      
+      // Ending JSON String
+      
+    </script>
   </body>
 </html>

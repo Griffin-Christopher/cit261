@@ -1,16 +1,104 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 5</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 5</h1>
+      <ul id="headerText">
+        <li>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</li>
+      </ul>
+    </header>
+    <main>
+      <h2 id="dynamicHeader"></h2>
+      <p id="dynamicWelcome"></p>
+      <div id="pseudoForm">
+        <label>First Name:</label>
+        <input id="first" type="text"><br>
+        <label>Middle Name:</label>
+        <input id="middle" type="text"><br>
+        <label>Last Name:</label>
+        <input id="last" type="text"><br>
+        <label>Age:</label>
+        <input id="age" type="number"><br>
+        <input id="storeInfo" class="button" type="button" 
+               value="Submit my Information" onclick="storeInfo()">
+        <label id="metrics"></label>
+        <input id="clearStorage" class="button" type="button" 
+               value="Clear Storage" onclick="clearStorage()">
+      </div>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // Object
+      Visitor = function() {
+        // Array
+        this.fullName = ["First", "M", "Last"];
+        // Property
+        this.age      = 0;
+        // Hash Table
+        this.stats    = {"visitCount":0, "clickCount":0};
+      }; 
+      
+      // Instantiate Visitor
+      var visitor = new Visitor();
+      
+      // Storage Check
+      if (window.localStorage.length) {
+        // Load Data into Page
+        visitor = JSON.parse(localStorage.getItem("visitor"));
+        // Return Visitor
+        getByID("dynamicHeader").innerHTML = "Welcome back, " 
+                                           + visitor.fullName[0] + "!";
+        getByID("dynamicWelcome").innerHTML = "Do you need to update your information?";
+        // Load Visitor Data
+        getByID("first").value  = visitor.fullName[0];
+        getByID("middle").value = visitor.fullName[1];
+        getByID("last").value   = visitor.fullName[2];
+        getByID("age").value    = visitor.age; 
+      } else {
+        // New Visitor
+        getByID("dynamicHeader").innerHTML  = "Welcome, stranger!";
+        getByID("dynamicWelcome").innerHTML = "Please, take a moment to tell us " 
+                                            + "about yourself:";
+      }
+      // Increment Visits
+      visitor.stats["visitCount"]++;
+      
+      // Display Visits/Clicks
+      if (visitor.stats["visitCount"]) {
+        getByID("metrics").innerHTML = "(Number of Visits: " 
+                                   + visitor.stats["visitCount"];
+        if (visitor.stats["clickCount"]) {
+          getByID("metrics").innerHTML += " | Clicks: " 
+                                       + visitor.stats["clickCount"]; 
+        }
+        getByID("metrics").innerHTML += ")";
+      }
+
+      // Store Visitor Data
+      function storeInfo() {
+        // User Input
+        visitor.fullName[0] = getByID("first").value;
+        visitor.fullName[1] = getByID("middle").value;
+        visitor.fullName[2] = getByID("last").value;
+        visitor.age         = getByID("age").value;  
+        // Increment Clicks
+        visitor.stats["clickCount"]++;
+        localStorage.setItem("visitor", JSON.stringify(visitor));
+        window.location.reload(false);
+      }
+       
+      // Clear Local Storage
+      function clearStorage() {
+        window.localStorage.clear();
+        window.location.reload(false);
+      }
+    </script>
   </body>
 </html>

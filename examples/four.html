@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 4</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 4</h1>
+      <ul id="headerText">
+        <li>Using XMLHttpRequest to Consume a JSON Web Service</li>
+      </ul>
+    </header>
+    <main>
+      <h2>Locations Around the World</h2>
+      <div id="locations"></div>
+      <p id="credits">(Data provided by <a href="http://www.geonames.org/export/JSON-webservices.html">geonames.org</a>)</p>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // Data Request
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "http://api.geonames.org/citiesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&lang=en&username=demo");
+      // Monitor Load Progress
+      xhr.onreadystatechange = function() {
+        // Check Request Status
+        if (this.readyState === 4 && this.status === 200) {
+          // Pull Data from Geonames Service
+          var json = JSON.parse(this.responseText);
+          // Loop Through Data
+          for (var i = 0; i < 10; i++) {
+            // Create New Paragraph
+            var location = newElement("P");
+            // Insert Paragraph
+            getByID("locations").appendChild(location);
+            // Fill Paragraph
+            var num = new Number(json.geonames[i].population);
+            location.innerHTML = "<b>" + json.geonames[i].name + ", "
+                + json.geonames[i].countrycode + "</b> (Population: "
+                + num.toLocaleString('en', {useGrouping:true}) + ")";
+          }
+        }
+      };
+      xhr.send();
+    </script>
   </body>
 </html>

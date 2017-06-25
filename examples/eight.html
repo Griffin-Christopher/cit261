@@ -1,16 +1,83 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 8</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 8</h1>
+      <ul id="headerText">
+        <li>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</li>
+      </ul>
+    </header>
+    <main>
+      <h2 id="playState"></h2>
+      <div id="shapes">
+        <div class="axle">
+          <div class="pulsing"></div>
+        </div>
+        <div class="axle">
+          <div class="pulsing"></div>
+        </div>
+        <div class="axle">
+          <div class="pulsing"></div>
+        </div>
+      </div>
+      <div id="startStop">
+        <button id="startCSS" type="button">Why So Serious?</button>
+      </div>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      // Prepare Button
+      newEvent("startCSS", "click", startCSS);
+      
+      // Apply Transforms
+      function startCSS() {
+        // Change Colors
+        var squares = getByClass("pulsing");
+        squares[0].style.backgroundColor = "red";
+        squares[1].style.backgroundColor = "blue";
+        squares[2].style.backgroundColor = "green";
+        // Change Pulse Rate
+        for (var i = 0; i < squares.length; i++) {
+          squares[i].style.animationDuration = "0.25s";
+        }
+        // Start Spinning
+        var axles = getByClass("axle");
+        for (var i = 0; i < axles.length; i++) {
+          axles[i].className += " spinning";
+        }
+        // Change Button
+        getByID("startCSS").innerHTML = "Woah, Chill Out!";
+        delEvent("startCSS", "click", startCSS);
+        newEvent("startCSS", "click", stopCSS);
+        getByID("startCSS").id        = "stopCSS";
+      }
+      
+      // Remove Transforms
+      function stopCSS() {
+        // Revert Changes
+        var squares = getByClass("pulsing");
+        for (var i = 0; i < squares.length; i++) {
+          squares[i].style.animationDuration = "2s";
+          squares[i].style.backgroundColor = "black";
+        }
+        // Stop Spinning
+        var axles = getByClass("axle");
+        for (var i = 0; i < axles.length; i++) {
+          axles[i].classList.remove("spinning");
+        }
+        // Change Button
+        getByID("stopCSS").innerHTML = "Why So Serious?";
+        delEvent("stopCSS", "click", stopCSS);
+        newEvent("stopCSS", "click", startCSS);
+        getByID("stopCSS").id        = "startCSS";
+      }
+    </script>
   </body>
 </html>

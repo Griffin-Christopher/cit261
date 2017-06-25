@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 13</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 13</h1>
+      <ul id="headerText">
+        <li>Designing, Defining, and Triggering CSS3 Animations without Custom Libraries (Thought Library)</li>
+      </ul>
+    </header>
+    <main>
+      <h2>Animation Sequences</h2>
+      <div id="crt"></div>
+      <ul>
+        <li><button type="button" onclick="bounce()">Bounce</button></li>
+        <li><button type="button" onclick="rainbow()">Rainbow</button></li>
+        <li><button type="button" onclick="hover()">Hover</button></li>
+      </ul>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      function bounce() {
+        getByID("crt").classList.add("bounce");
+        getByID("crt").classList.remove("rainbow");
+        getByID("crt").classList.remove("hover");
+      }
+      function rainbow() {
+        getByID("crt").classList.add("rainbow");
+        getByID("crt").classList.remove("bounce");
+        getByID("crt").classList.remove("hover");
+      }
+      function hover() {
+        getByID("crt").classList.add("hover");
+        getByID("crt").classList.remove("bounce");
+        getByID("crt").classList.remove("rainbow");
+      }
+    </script>
   </body>
 </html>

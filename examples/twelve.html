@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluency Topic 12</title>
+    <link type="text/css" rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/js/global.js"></script>
   </head>
   <body>
-    <div>TODO write content</div>
+    <header>
+      <h1 id="headerTitle">Proficiency Example 12</h1>
+      <ul id="headerText">
+        <li>Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries (Thought Library)</li>
+      </ul>
+    </header>
+    <main>
+      <h2>Morphing Shapes</h2>
+      <div id="flubber"></div>
+      <ul>
+        <li><button type="button" onclick="matrixShape()">Matrix</button></li>
+        <li><button type="button" onclick="translateShape()">Translate</button></li>
+        <li><button type="button" onclick="scaleShape()">Scale</button></li>
+        <li><button type="button" onclick="rotateShape()">Rotate</button></li>
+        <li><button type="button" onclick="skewShape()">Skew</button></li>
+      </ul>
+      <button id="resetMorphs" type="button" onclick="reset()">Reset</button>
+    </main>
+    <footer>
+      <p id="footerText"><a href="../index.md">(Return to Index)</a></p>
+    </footer>
+    <script type="text/javascript">
+      function matrixShape() {
+        getByID("flubber").classList.add("matrix");
+      }
+      function translateShape() {
+        getByID("flubber").classList.add("translate");
+      }
+      function scaleShape() {
+        getByID("flubber").classList.add("scale");
+      }
+      function rotateShape() {
+        getByID("flubber").classList.add("rotate");
+      }
+      function skewShape() {
+        getByID("flubber").classList.add("skew");
+      }
+      function reset() {
+        getByID("flubber").classList.remove("matrix", "translate", "scale", 
+                                            "rotate", "skew");
+      }
+    </script>
   </body>
 </html>
