@@ -1,0 +1,38 @@
+{
+  "americano":[
+  ],
+  "breve":[
+    {"name":"Banana Bread","ingredients":["Creme de Banana Syrup","Hazelnut"]},
+    {"name":"Cookie","ingredients":["Chocolate","Macadamia Nut","White Chocolate"]},
+    {"name":"Dirty Macchiato","ingredients":["Caramel","English Toffee"]},
+    {"name":"Golden Eagle","ingredients":["Caramel","Espresso","Vanilla Syrup","Whipped Cream"]}
+  ],
+  "brew":[
+  ],
+  "chai":[
+  ],
+  "cocoa":[
+    {"name":"German Chocolate","ingredients":["Caramel","Coconut","Dark Chocolate"]}
+  ],
+  "freeze":[
+  ],
+  "frost":[
+  ],
+  "latte":[
+    {"name":"Caramel Nog","ingredients":["Caramel","Eggnog"]},
+    {"name":"Chai Nog","ingredients":["Chai","Eggnog"]}
+  ],
+  "mocha":[ 
+    {"name":"Ba-Nay-Nay","ingredients":["Banana","Dark Chocolate","Whipped Cream"]},
+    {"name":"Candy Cane","ingredients":["Dark Chocolate","Peppermint"]},
+    {"name":"Crazy Hawaiian","ingredients":["Caramel","Chocolate","Dark Chocolate","Macadamia Nut"]}
+  ],
+  "rebel":[
+  ],
+  "smoothie":[
+  ],
+  "soda":[
+  ],
+  "tea":[
+  ]
+}

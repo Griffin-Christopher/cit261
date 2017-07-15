@@ -1,0 +1,42 @@
+/* AUTHOR : Christopher Griffin */
+/*
+COLORS
+  Dark Blue:  #0d133e (Body/Header/Footer BG)
+  Light Blue: #006196 (Content BG)
+  Red:        #d9272d ()
+  Yellow:     #fee100 ()
+FONTS
+  Title Copy: PT Serif, Georgia, Serif
+  Body Copy:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif
+*/
+
+/* GOOGLE FONTS */
+
+/* LAYOUT */
+* {margin: 0; padding: 0;}
+body {background-color: #0d133e;}
+
+/* GLOBALS */
+
+/* NAVIGATION */
+  /* Header */
+  /* Global */
+  /* Local */
+  /* Footer */
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {}
+
+/* HEADER */
+header {padding: 20px;}
+
+/* PAGE */   
+  /* CONTENT */
+  main {background-color: #006196; min-height: 100%; padding: 20px;}
+    /* Load Bar */
+    #progressDialog {text-align: center;}
+      progress {height: 2em; width: 30em;}
+      #progressStatus {font-size: 2em; margin-top: 10px;}
+
+/* FOOTER */
+footer {padding: 15px 20px; text-align: center;}
