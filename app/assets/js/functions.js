@@ -42,7 +42,7 @@ function importCatalog() {
     // Cleanup Progress Bar
     progress.value = bar.loaded;
     status.innerHTML = "Loading Data: 100%";
-    setTimeout(removeProgressDialog(), 2000);
+    setTimeout(removeProgressDialog, 2000);
   }
   jsonCatalog.send();
 }
