@@ -109,7 +109,6 @@ function generateCatalog(json) {
 	return drinks;
 }
 function removeProgressDialog() {
-<<<<<<< HEAD
 	// Build Login Page
 	insertBanner();
 	loadLoginPage();
@@ -246,7 +245,3 @@ function clearStorage() {
 	loadLoginPage();
 	alert("All users have been deleted.");
 }
-=======
-  delChild("progressDialog");
-}
->>>>>>> origin/master
