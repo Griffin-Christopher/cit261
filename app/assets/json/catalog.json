@@ -1,38 +1,53 @@
-{
-  "americano":[
-  ],
+{ 
   "breve":[
-    {"name":"Banana Bread","ingredients":["Creme de Banana Syrup","Hazelnut"]},
-    {"name":"Cookie","ingredients":["Chocolate","Macadamia Nut","White Chocolate"]},
-    {"name":"Dirty Macchiato","ingredients":["Caramel","English Toffee"]},
-    {"name":"Golden Eagle","ingredients":["Caramel","Espresso","Vanilla Syrup","Whipped Cream"]}
-  ],
-  "brew":[
-  ],
-  "chai":[
-  ],
-  "cocoa":[
-    {"name":"German Chocolate","ingredients":["Caramel","Coconut","Dark Chocolate"]}
-  ],
+    {"name":"Banana Bread","ingredients":["Banana","Hazelnut"],"iced":false},
+    {"name":"Cookie","ingredients":["Chocolate Macadamia Nut","White Chocolate"],"iced":true},
+    {"name":"Golden Eagle","ingredients":["Caramel","Espresso","Vanilla Syrup","Whipped Cream"],"iced":true},
+		{"name":"Nutty Irishman","ingredients":["Hazelnut","Irish Cream"],"iced":false},
+		{"name":"S'Mores","ingredients":["Brown Sugar","Chocolate Macadamia Nut","Cinnamon","Dark Chocolate","White Chocolate"],"iced":false},
+		{"name":"Snickerdoodle","ingredients":["Chocolate Macadamia Nut","Cinnamon","Cinnamon Sprinkles","White Chocolate"],"iced":false},
+		{"name":"Sugar Cookie","ingredients":["Chocolate Macadamia Nut","White Chocolate"],"iced":false}
+	],
   "freeze":[
-  ],
+		{"name":"The Bob","ingredients":["Banana","Coconut","Dark Chocolate"]},
+		{"name":"Trifecta","ingredients":["Caramel","Dark Chocolate","White Chocolate"]},
+		{"name":"Wallaby","ingredients":["Caramel","Chocolate Macadamia Nut","Dark Chocolate"]}
+	],
   "frost":[
-  ],
+		{"name":"Bubble Gum","ingredients":["Banana","Strawberry","Vanilla"]},
+		{"name":"Cotton Candy","ingredients":["Blue Raspberry","White Chocolate"]},
+		{"name":"Freedom","ingredients":["Blue Raspberry","Raspberry Drizzle","Vanilla"]},
+		{"name":"Molten Lava","ingredients":["Cinnamon","Dark Chocolate"]},
+		{"name":"Ninja","ingredients":["Creme de Menthe","White Chocolate"]},
+		{"name":"Peppermint Bark","ingredients":["Dark Chocolate","Pepermint","White Chocolate"]},
+		{"name":"Pink Flamingo","ingredients":["Peach","Strawberry","White Chocolate"]},
+		{"name":"Toasted Mellow","ingredients":["Chocolate Macadamia Nut","White Chocolate"]}
+	],
   "latte":[
-    {"name":"Caramel Nog","ingredients":["Caramel","Eggnog"]},
-    {"name":"Chai Nog","ingredients":["Chai","Eggnog"]}
-  ],
+    {"name":"Caramel Nog","ingredients":["Caramel","Eggnog"],"iced":false},
+    {"name":"Chai Nog","ingredients":["Chai","Eggnog"],"iced":false}
+	],
   "mocha":[ 
-    {"name":"Ba-Nay-Nay","ingredients":["Banana","Dark Chocolate","Whipped Cream"]},
-    {"name":"Candy Cane","ingredients":["Dark Chocolate","Peppermint"]},
-    {"name":"Crazy Hawaiian","ingredients":["Caramel","Chocolate","Dark Chocolate","Macadamia Nut"]}
-  ],
+    {"name":"Ba-Nay-Nay","ingredients":["Banana","Dark Chocolate","Whipped Cream"],"iced":false},
+		{"name":"Candy Cane","ingredients":["Peppermint"],"iced":false},
+    {"name":"Cinnamon Bun","ingredients":["Brown Sugar","Cinnamon","Salted Caramel"],"iced":false},
+    {"name":"German Chocolate","ingredients":["Caramel","Coconut","Dark Chocolate"],"iced":false},
+		{"name":"Grasshopper","ingredients":["Creme de Menthe","Dark Chocolate"],"iced":false}
+	],
   "rebel":[
-  ],
-  "smoothie":[
-  ],
-  "soda":[
-  ],
+		{"name":"Dinosaur Egg","ingredients":["Almond Drizzle","Blue Raspberry","Strawberry","White Chocolate"],"iced":false},
+		{"name":"Double Rainbro","ingredients":["Coconut","Peach","Strawberry"],"iced":false},
+		{"name":"Gummy Bear","ingredients":["Kiwi","Lime","White Chocolate"],"iced":true},
+		{"name":"Irie","ingredients":["Banana","Coconut"],"iced":false},
+		{"name":"Laser Cat","ingredients":["Coconut","Raspberry"],"iced":true},
+		{"name":"Midnight","ingredients":["Blackberry","Pomegranate"],"iced":true},
+		{"name":"Starry Night","ingredients":["Blackberry","Blue Raspberry"],"iced":false},
+		{"name":"Stop Light","ingredients":["Kiwi","Passion Fruit","Pomegranate"],"iced":true},
+		{"name":"Trixie","ingredients":["Almond","Orange","Pomegranate"],"iced":true},
+		{"name":"Vampire Slayer","ingredients":["Pomegranate","Strawberry"],"iced":true}
+	],
   "tea":[
-  ]
+		{"name":"Dutch Mojito","ingredients":["Coconut","Creme de Menthe","Lime"],"iced":true},
+		{"name":"Electric Berry","ingredients":["Blue Raspberry","Lime","Green Tea"],"iced":true}
+	]
 }

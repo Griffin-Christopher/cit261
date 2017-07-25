@@ -1,42 +1,139 @@
 /* AUTHOR : Christopher Griffin */
 /*
 COLORS
-  Dark Blue:  #0d133e (Body/Header/Footer BG)
-  Light Blue: #006196 (Content BG)
-  Red:        #d9272d ()
-  Yellow:     #fee100 ()
+  Dark Blue:  #0d133e
+  Light Blue: #006196
+  Red:        #d9272d
+	Dim Red:    #8b3c53
+  Yellow:     #fee100
 FONTS
-  Title Copy: PT Serif, Georgia, Serif
-  Body Copy:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif
+  Title Copy: Verdana, Geneva, sans-serif;
+  Body Copy:  Verdana, Geneva, sans-serif;
 */
 
-/* GOOGLE FONTS */
+/* FONTS */
+body {font-family: Verdana, Geneva, sans-serif;}
 
 /* LAYOUT */
 * {margin: 0; padding: 0;}
+html {}
 body {background-color: #0d133e;}
+header {position: fixed; top: 0; left: 0;}
+footer {position: fixed; bottom: 0; left: 0;}
 
 /* GLOBALS */
+button {padding: 1vh 1.5vw; transition: background-color 0.25s;}
 
-/* NAVIGATION */
-  /* Header */
-  /* Global */
-  /* Local */
-  /* Footer */
+/* ANIMATIONS */
+@keyframes flipIn {
+	from {-webkit-transform: rotateY(90deg);
+						-ms-transform: rotateY(90deg);
+								transform: rotateY(90deg);}
+	to   {-webkit-transform:rotateY(0deg);
+					-ms-transform: rotateY(0deg);
+							transform: rotateY(0deg);}
+}
+@-webkit-keyframes flipIn {
+	from {-webkit-transform: rotateY(90deg);
+						-ms-transform: rotateY(90deg);
+								transform: rotateY(90deg);}
+	to   {-webkit-transform: rotateY(0deg);
+					-ms-transform: rotateY(0deg);
+							transform: rotateY(0deg);}
+}
+
+/* CLASS LIST */
+.hidden {display: none !important;}
+.slideUp {-webkit-transform: translate(0, -100vh); transform: translate(0, -100vh); -webkit-transition-duration: 250ms; transition-duration: 250ms;}
+.navTouch {background-color: black !important; color: #fee100 !important;}
+.formTouch {color: #006196 !important;}
+.textTouch {color: #fee100 !important;}
+.favsListTouch {background-color: #d9272d !important;}
+.flipIn {-webkit-animation: flipIn 0.10s linear; animation: flipIn 0.10s linear;}
 
 /* HEADINGS */
 h1, h2, h3, h4, h5, h6 {}
+h1 {font-size: 6vw;}
+h2 {font-size: 5.5vw;}
 
 /* HEADER */
-header {padding: 20px;}
+#banner {background-color: #0d133e; box-sizing: border-box; color: white; padding: 2vh 7.5vw; width: 100vw;}
 
 /* PAGE */   
-  /* CONTENT */
-  main {background-color: #006196; min-height: 100%; padding: 20px;}
-    /* Load Bar */
-    #progressDialog {text-align: center;}
-      progress {height: 2em; width: 30em;}
-      #progressStatus {font-size: 2em; margin-top: 10px;}
+#viewport {background-color: #006196; min-height: 72vh; overflow: auto; padding: 13vh 5vw 11vh;}
+#viewport + * {margin-top: 16vh}
 
+	/* Load Bar */
+	#progressDialog {background-color: #0d133e; box-sizing: border-box; height: 100vh; width: 100vw; padding: 0 10vw; position: fixed; top: 0; left: 0; text-align: center;}
+		#progressLogo {margin: 20vh 0 5vh; height: 45vh; max-width: 100%;}
+		#progressBar {height: 2.5vh; max-width: 100%; width: 30em;}
+		#progressStatus {color: #fee100; font-size: 5vw; font-weight: bold; margin-top: 3vh;}
+		
+	/* Login/Register Pages */
+	#loginLogo {max-width: 90vw; min-width: 90vw;}
+	#loginPrompt, #registerPrompt  {color: white; margin-top: 2vh;}
+	#loginForm, #registerForm {text-align: right;}
+		#loginForm label, #registerForm label 
+			{color: white; display: inline-block; font-size: 4vw; font-weight: bold; margin-right: 3vw;}
+		#loginForm input, #registerForm input 
+			{display: inline-block; font-size: 4vw; margin: 2vh 5vw 0 0; padding-left: 1vh; height: 8vw; width: 50vw;}
+		#error {color: #fee100; font-size: 3vw; font-weight: bold; margin-top: 2vh; text-align: left; }
+	#formButtons {margin-right: 5vw; text-align: right;}
+		#loginButton, #registerButton {font-size: 3.75vw; margin-top: 3vh;}
+		#loginButton:not(:last-child) {margin-right: 1vw;}
+		#loginButton:last-child, #registerButton:last-child 
+			{background-color: #006196; border: none; color: white; text-decoration: underline;}
+		#registerButton:not(:last-child) {margin-right: 3vw;}
+		
+	/* Home Page */
+	#infoHeading, #favsHeading {color: white;}
+	#accountInfo {color: white;}
+		#accountInfo p {font-size: 4.375vw; margin-top: 2vw;}
+		#deleteUsers {background-color: transparent; border: none; color: #d9272d; font-size: 3.125vw; font-weight: bold; outline: none; padding: 0 !important; margin-top: 2vw;}
+	#favsHeading {margin-top: 5vh;}
+	#favsList {color: white;}
+		#favsTable {border-spacing: 0; width: 100%;}
+			#favsTable tr:first-child  th {border-bottom: 2px solid #0d133e;}
+				#favsTable th {font-size: 3.125vw; padding: 3vw 0 1.75vw 1.75vw; text-align: left;}
+			#favsTable tr:not(:first-child) {background-color: #8b3c53; transition: background-color 0.25s;}
+			#favsTable tr:not(:first-child) td {border-top: 1px solid #0d133e; vertical-align: baseline;}
+				#favsTable td {padding: 1vw 0 1vw 1.75vw;}
+				#favsTable td:first-child {font-size: 3.125vw; font-weight: bold; width: 25%;}
+				#favsTabls td:nth-child(2) {width: 75%;}
+				#favsTable button {background-color: transparent; border: none; color: white; font-size: 4.375vw; outline: none; padding: 0 !important;}
+	
+	/* Drink Type Page */
+	#index {text-align: center;}
+		#index figure {display: inline-block; margin: 0 auto;}
+		#index figure:nth-child(n+3) {margin-top: 5vh;}
+		#index figure:nth-child(2n+1) {margin-right: 5vw;}
+			#index img {width: 42.5vw;}
+			#index figcaption {color: white; font-size: 5vw; font-weight: bold;}
+	
+	/* Drink Gallery Page */
+	#gallery {}
+		#gallery figure {display: inline-block;}
+		#gallery figure:nth-child(n+4) {margin-top: 3.28125vw;} /* Subtracted 1.71875vw of inline space */
+		#gallery figure:not(:nth-child(3n)) {margin-right: 5vw;}
+			#gallery img {border: 2px solid #0d133e; box-sizing: border-box; height: 36.124vw; width: 26.666vw;}
+		
+	/* Product Page */
+	#product {text-align: center;}
+		#product img {border: 2px solid #0d133e; box-sizing: border-box; margin: auto; max-width: 75vw;}
+		#product p {color: white; margin-top: 5vw; font-size: 4.375vw; text-align: left;}
+		#product button {font-size: 3.75vw; margin-top: 3vh;}
+		
+	/* Favorites Page */
+	#favorites {}
+		#favorites figure {display: inline-block;}
+		#favorites figure:nth-child(n+4) {margin-top: 3.28125vw;} /* Subtracted 1.71875vw of inline space */
+		#favorites figure:not(:nth-child(3n)) {margin-right: 5vw;}
+			#favorites img {border: 2px solid #0d133e; box-sizing: border-box; height: 24.083vh; width: 26.666vw;}
+			#favorites p {color: white;}
+			
 /* FOOTER */
-footer {padding: 15px 20px; text-align: center;}
+#navbar {background-color: #0d133e; text-align: center; width: 100vw;}
+	#navbar button {background-color: transparent; border: none; color: white; float: left; font-size: 5vw; font-weight: bold; outline: none;}
+	#guestNav {width: 100%;}
+	#mainNav button {width: 25%;}
+	#mainNav button:not(:last-child) {border-right: none;}
